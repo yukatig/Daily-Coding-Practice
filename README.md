@@ -1,1 +1,2 @@
-# Alvin is my best friend
+# Documenting my daily coding practice 
+
