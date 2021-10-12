@@ -44,3 +44,5 @@ class Solution(object):
             leftMax = (1 + self.maxDepth(root.left))
             
             maxDepth = max(rightMax, leftMax)
+
+            return maxDepth
