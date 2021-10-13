@@ -1,5 +1,6 @@
 '''
 How Many Numbers Are Smaller Than the Current Number
+
 Input: nums = [8,1,2,2,3]
 Output: [4,0,1,1,3]
 Explanation: 
