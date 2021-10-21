@@ -30,3 +30,31 @@ Constraints:
 0 <= sum(nums[i]) <= 1000
 -1000 <= target <= 1000
 '''
+class Solution(object):
+    def findTargetSumWays(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        index = len(nums) - 1
+        currCount = 0
+        
+        return self.recursiveTarget(nums, target, currCount, index)
+        
+    def recursiveTarget(self, nums, target, currCount, index):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        if (index < 0):
+            if (currCount == target):
+                return 1
+            else:
+                return 0
+            
+        leftTree = self.recursiveTarget(nums, target, currCount + nums[index], index - 1)
+        rightTree = self.recursiveTarget(nums, target, currCount - nums[index], index - 1)
+        
+        return leftTree + rightTree 
